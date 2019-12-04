@@ -15,5 +15,6 @@ class Post
     if @author.name
       @author.name
     end
+    nil
   end
 end

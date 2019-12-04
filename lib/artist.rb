@@ -6,7 +6,13 @@ class Artist
   end
 
   def songs
-    artist_songs = Song.all.collect { |song| if song.artist == self}
+    artist_songs = []
+    Song.all.each do |song|
+      if song.artist == self
+        artist_songs << song
+      end
+    end
+    artist_songs
   end
 
   def add_song(song)

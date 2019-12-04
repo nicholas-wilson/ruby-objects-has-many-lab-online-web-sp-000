@@ -24,7 +24,7 @@ class Artist
     add_song(song)
   end
 
-  def song_count
+  def self.song_count
     count = 0
     Song.all.each do |song|
       if song.artist

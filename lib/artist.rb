@@ -25,6 +25,12 @@ class Artist
   end
 
   def song_count
-    Song.all.length
+    count = 0
+    Song.all.each do |song|
+      if song.artist
+        count += 1
+      end
+    end
+    count
   end
 end

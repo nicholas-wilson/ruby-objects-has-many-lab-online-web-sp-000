@@ -25,6 +25,12 @@ class Author
   end
 
   def post_count
-
+    count = 0
+    Post.all.each do |post|
+      if post.author
+        count += 1
+      end
+    end
+    count
   end
 end

@@ -3,11 +3,10 @@ class Artist
 
   def initialize(name)
     @name = name
-    @songs = []
   end
 
   def songs
-    @songs
+    Song.all.collect { |song| song.artist == self}
   end
 
   def add_song(song)
